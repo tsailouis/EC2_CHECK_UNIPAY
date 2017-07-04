@@ -8,61 +8,67 @@ using CTCBAPI.Common;
 using System.Data.SqlClient;
 namespace EC2_CHECK_UNIPAY
 {
-    class UpdateOrderStatus
+    class UpdateOrderStatus : BathSetting
     {
 
-        private SqlConnection conn;
-        private SqlCommand sqlCmd = new SqlCommand();
-        internal UpdateOrderStatus() { }
-        internal UpdateOrderStatus( List<CTCBAPI.Model.UnionMod> li,string bathType,DataRow dr) {
-            orderStatusToDB(li,bathType, dr);
-        }
-        private void orderStatusToDB(List<CTCBAPI.Model.UnionMod> li, string bathType, DataRow dr) {
+       
+        private List<CTCBAPI.Model.UnionMod> li;
+        private string bathType;
+        private DataRow dr;
 
-            string sql = "";
-            if (bathType.Equals("1")) 
-            {
-                //未授權
-                if (dr["isAuth"].ToString().Equals("N"))
-                { 
-                    
-                } 
-                else if (dr["isAuth"].ToString().Equals("Y")) 
-                { 
-                }
-            }
-            else if (bathType.Equals("2")) 
-            { 
-            
-            }
+        public void setList(List<CTCBAPI.Model.UnionMod> li) { this.li = li; }
+        public void setBathType(string bathType) { this.bathType = bathType; }
+        public void setDr(DataRow dr) { this.dr = dr; }
 
-        }
+        
+        public void orderStatusToDB() {
+            ConnDB();
+            DataTable dt = new DataTable();
 
-        #region 取得連線
-        /// <summary>
-        /// 連結DB...路徑由app.config設定
-        /// </summary>
-        private void ConnDB()
-        {
             try
             {
-                string connStr = ConfigurationManager.ConnectionStrings["commerce"].ConnectionString;
-                conn = new SqlConnection(connStr);
-                conn.Open();
-                Console.WriteLine("DB conn OK");
+                string sql = "";
+                SqlCommand sda;
+                if (bathType.Equals("1"))
+                {
+                 
+
+                    sql = "EXEC EC2_UPDATE_UNIPAY_AUTH_AND_UNAUTH @IsAuth,@OrderID,@Xid,@RequestTime ,@RespTime,@OrderStatus,@TraceNumber,@TraceTime,@Qid,@AuthAmount";
+                   
+                }
+                else if (bathType.Equals("2"))
+                {
+                    sql = "EXEC EC2_CHECK_UNIPAY_REFUND_AND_CANCLE @IsAuth,@OrderID,@Xid,@RequestTime ,@RespTime,@OrderStatus,@TraceNumber,@TraceTime,@Qid,@AuthAmount";
+                }
+
+                sda = new SqlCommand(sql, conn);
+                sda.Parameters.AddWithValue("@IsAuth", dr["IsAuth"].ToString());
+                sda.Parameters.AddWithValue("@OrderID", li[0].lidm);
+                sda.Parameters.AddWithValue("@Xid", li[0].xid);
+                sda.Parameters.AddWithValue("@RequestTime", li[0].requestTime);
+                sda.Parameters.AddWithValue("@RespTime", li[0].respTime);
+                sda.Parameters.AddWithValue("@OrderStatus", li[0].orderStatus);
+                sda.Parameters.AddWithValue("@TraceNumber", li[0].traceNumber);
+                sda.Parameters.AddWithValue("@TraceTime", li[0].traceTime);
+                sda.Parameters.AddWithValue("@Qid", li[0].qid);
+                sda.Parameters.AddWithValue("@AuthAmount", li[0].settleAmount);
+
+                sda.ExecuteReader();
+              
+                
+
+               
             }
             catch (Exception ex)
             {
-                Console.WriteLine("DB conn failed: {0}", ex.Message);
-                //errMsg += ex.ToString() + htmlP;
-                throw ex; //必須中斷
+                InsertLog.insertLog(ex.ToString());
+
             }
+            finally { CloseDB(); }
+            
+
         }
 
-        private void CloseDB()
-        {
-            conn.Close();
-        }
-        #endregion
+      
     }
 }

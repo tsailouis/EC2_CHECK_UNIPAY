@@ -11,7 +11,9 @@ namespace EC2_CHECK_UNIPAY
         static void Main(string[] args)
         {
             #if DEBUG
-                      GetOrderList gtest = new GetOrderList("1");    
+                      GetOrderList gtest = new GetOrderList();
+                      gtest.setBathType("1");
+                      gtest.CallGetOrderListSP();
             #endif
                       
             
@@ -21,7 +23,9 @@ namespace EC2_CHECK_UNIPAY
                
                 #region LOG檔記錄開始
                 #endregion
-                GetOrderList gt = new GetOrderList(args[0].ToString());
+                GetOrderList gt = new GetOrderList();
+                gt.setBathType(args[0].ToString());
+                gt.CallGetOrderListSP();
             }
            
         }

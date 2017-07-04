@@ -7,5 +7,6 @@ namespace EC2_CHECK_UNIPAY
 {
     class SendMail
     {
+        
     }
 }

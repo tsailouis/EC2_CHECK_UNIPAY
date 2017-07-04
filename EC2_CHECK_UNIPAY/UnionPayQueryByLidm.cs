@@ -9,23 +9,23 @@ namespace EC2_CHECK_UNIPAY
 {
     class UnionPayQueryByLidm : BathSetting
     {
-         public UnionPayQueryByLidm() { }
-         public UnionPayQueryByLidm(DataTable dt,string bathType) 
-        {
-            getOrderStatus(dt, bathType);
-        }
+        private DataTable dt;
+        private string bathType;
 
+        public void setDt(DataTable dt) { this.dt = dt; }
+        public void setBathType(string bathType) { this.bathType = bathType; }
+    
        
 
-         private void getOrderStatus(DataTable dt,string bathType) 
+         public void getOrderStatus() 
          {
           
              foreach (DataRow dr in dt.Rows) 
              { 
                  CTCBAPI.UnionPayQueryByLidm uc = new CTCBAPI.UnionPayQueryByLidm();
-                 uc.server = BathSetting.strChinaTrustServer; //設置伺服器網址
-                 uc.merId = BathSetting.strMerId; // 設置特店編號
-                 uc.macKey = BathSetting.strMacKey; // 設置壓碼鍵值
+                 uc.server = strChinaTrustServer; //設置伺服器網址
+                 uc.merId = strMerId; // 設置特店編號
+                 uc.macKey = strMacKey; // 設置壓碼鍵值
                  uc.lidm = dr["OrderId"].ToString(); //訂單編號
                  string rtnCode = uc.doAction(); // 執行交易 (查詢交易)
                  if (rtnCode.Equals("000"))
@@ -35,16 +35,31 @@ namespace EC2_CHECK_UNIPAY
                      //查詢成功
                      if (bathType.Equals("1"))
                      {
-                         //已授權=>SP
-                         //未授權=>SP
+                         //未授權
+                         UpdateOrderStatus upOrder = new UpdateOrderStatus();
+                         upOrder.setList(uc.outPara);
+                         upOrder.setDr(dr);
+                         upOrder.setBathType(bathType);
+                         upOrder.orderStatusToDB();
                      
                      }
                      else if (bathType.Equals("2"))
                      {
                          //11,12,22,41,42,33,43,44
-                         //23發動退貨
-                         UnionPayCancel upc=new UnionPayCancel(li);
-                         //13授權成功
+                         if (li[0].orderStatus.Equals("13")) 
+                         { //發動取消授權
+                             UnionPayCancel unCancel=new UnionPayCancel();
+                             unCancel.setList(li);
+                             unCancel.updateUnionPayCancel(); 
+                         } else if (li[0].orderStatus.Equals("23")) 
+                         {//23發動退貨
+                             UnionPayRefund unRefund = new UnionPayRefund();
+                             unRefund.setList(li);
+                             unRefund.updateUnionPayRefund(); 
+                         }
+                         
+                       
+                        
                      }
 
                  }
