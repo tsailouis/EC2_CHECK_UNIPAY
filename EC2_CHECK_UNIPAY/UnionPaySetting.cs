@@ -6,12 +6,14 @@ using System.Configuration;
 using System.Data.SqlClient;
 namespace EC2_CHECK_UNIPAY
 {
-    class BathSetting
+    class UnionPaySetting
     {
         internal static readonly string strChinaTrustServer = ConfigurationManager.AppSettings["ChinaTrustServer"].ToString().Trim();
         internal static readonly string strMerId = ConfigurationManager.AppSettings["merId"].ToString().Trim();
         internal static readonly string strMacKey = ConfigurationManager.AppSettings["macKey"].ToString().Trim();
-
+        internal static readonly string strReceiver = ConfigurationManager.AppSettings["receiver"].ToString().Trim();
+        internal static readonly string strSender = ConfigurationManager.AppSettings["sender"].ToString().Trim();
+        internal static readonly string strRefundTitle = ConfigurationManager.AppSettings["refundTitle"].ToString().Trim();
 
         internal SqlConnection conn;
         internal SqlCommand sqlCmd = new SqlCommand();

@@ -1,0 +1,65 @@
+
+2017-07-11 12:23:06：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 78
+2017-07-11 12:24:16：回應値:999
+2017-07-11 12:25:37：訂單編號:0005001198 回應値:999
+2017-07-11 14:38:08：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 14:40:09：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 14:54:31：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 14:56:48：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 14:58:53：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 14:59:08：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 15:20:43：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 46
+2017-07-11 15:20:43：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 67
+2017-07-11 16:51:01：System.Data.SqlClient.SqlException: 從字元字串轉換到 datetime 時，轉換失敗。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 56
+2017-07-11 16:57:55：System.Data.SqlClient.SqlException: 從字元字串轉換到 datetime 時，轉換失敗。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 56

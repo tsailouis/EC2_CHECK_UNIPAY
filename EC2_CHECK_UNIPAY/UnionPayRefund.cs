@@ -4,22 +4,27 @@ using System.Linq;
 using System.Text;
 using CTCBAPI.Common;
 using System.Configuration;
-
+using System.Data;
 namespace EC2_CHECK_UNIPAY
 {
-    class UnionPayRefund : BathSetting
+    class UnionPayRefund : UnionPaySetting
     {
 
         private List<CTCBAPI.Model.UnionMod> li;
+        private string bathType;
+        private DataRow dr;
+
         public void setList(List<CTCBAPI.Model.UnionMod> li) { this.li = li; }
+        public void setBathType(string bathType) { this.bathType = bathType; }
+        public void setDr(DataRow dr) { this.dr = dr; }
 
 
 
-        public Dictionary<string, string> updateUnionPayRefund()
+        public void updateUnionPayRefund()
         {
             try
             { 
-                Dictionary<string, string> refundResult = new Dictionary<string, string>();
+                
                 CTCBAPI.UnionPayRefund uc = new CTCBAPI.UnionPayRefund();
                 uc.server = strChinaTrustServer; //設置伺服器網址
                 uc.merId = strMerId; // 設置特店編號
@@ -27,22 +32,29 @@ namespace EC2_CHECK_UNIPAY
                 uc.xid = li[0].xid; // 設定交易識別碼
                 uc.lidm = li[0].lidm; // 設置訂單編號
                 string rtnCode = uc.doAction(); // 執行交易 (取消交易)
-                if (rtnCode.Equals("000"))
+                if (rtnCode.Equals("Success"))
                 {
-                   
-                    refundResult.Add("rtnCode", rtnCode);
-                    refundResult.Add("rtnCode", uc.outPara.respCode);
-                    refundResult.Add("rtnCode", uc.outPara.respMsg);
-
-                    
+                    UpdateOrderStatus upOrder = new UpdateOrderStatus();
+                    upOrder.setList(li);
+                    upOrder.setDr(dr);
+                    upOrder.setBathType(bathType);
+                    upOrder.UpdateOrderStatusToDB();
                 }
-                return refundResult;
+                else
+                {   //發動退貨失敗
+                    InsertLog.insertLog("訂單編號:" + dr["OrderId"].ToString() + " 回應値:" + rtnCode);
+                }
+
+              
+
+                
             }
             catch (Exception ex)
             {
              
                 InsertLog.insertLog(ex.ToString());
-                return null;
+           
+             
             }
         }
     }

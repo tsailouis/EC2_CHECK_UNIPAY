@@ -48,7 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BathSetting.cs" />
+    <Compile Include="DataTableExtensions.cs" />
+    <Compile Include="UnionPaySetting.cs" />
     <Compile Include="GetOrderList.cs" />
     <Compile Include="InsertLog.cs" />
     <Compile Include="Program.cs" />
@@ -57,10 +58,15 @@
     <Compile Include="UnionPayCancel.cs" />
     <Compile Include="UnionPayQueryByLidm.cs" />
     <Compile Include="UnionPayRefund.cs" />
+    <Compile Include="UnipayList.cs" />
     <Compile Include="UpdateOrderStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\failMailTemplate.txt" />
+    <Content Include="Template\refundMailTemplate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

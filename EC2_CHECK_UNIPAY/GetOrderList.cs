@@ -8,17 +8,17 @@ using System.Data;
 
 namespace EC2_CHECK_UNIPAY
 {
-    class GetOrderList : BathSetting
+    class GetOrderList : UnionPaySetting
     {
      
         private string bathType;
         public void setBathType(string bathType) { this.bathType = bathType; }
-
+        private List<string> refundSuccessli = new List<string>();
         public void CallGetOrderListSP() 
         {
             ConnDB();
             DataTable dt = new DataTable();
-
+            Dictionary<string, List<CTCBAPI.Model.UnionMod>> failResult = new Dictionary<string, List<CTCBAPI.Model.UnionMod>>();
             try
             {
 
@@ -37,11 +37,25 @@ namespace EC2_CHECK_UNIPAY
                 
                 if(dt.Rows.Count>0)
                 {
+                   
                     UnionPayQueryByLidm un=new UnionPayQueryByLidm();
                     un.setBathType(bathType);
                     un.setDt(dt);
-                    un.getOrderStatus();
-                    //跑完迴圈 請款失敗要發信
+                    un.setDictionary(failResult);
+                    un.setList(refundSuccessli);
+                    un.unionPayQueryByLidm();
+                    
+                
+                    SendMail se = new SendMail();
+                    se.setBathType(bathType);
+                    se.setDictionary(failResult);
+                    se.setDt(dt);
+                    se.setList(refundSuccessli);
+                    if (failResult.Count>0)
+                        se.sendFailMail();
+                    if (refundSuccessli.Count > 0)
+                        se.sendRefundMail();
+                   
                 }
 
             }

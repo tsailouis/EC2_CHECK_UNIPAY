@@ -1,0 +1,97 @@
+
+2017-07-05 15:14:57：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.getOrderStatus() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 65
+2017-07-05 15:35:56：System.Data.SqlClient.SqlException: 參數化查詢 '(@IsAuth nvarchar(1),@OrderID nvarchar(10),@Xid nvarchar(31),@Re' 必須有參數 '@RespTime'，但未提供。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 56
+2017-07-05 15:45:24：System.Data.SqlClient.SqlException: 參數化查詢 '(@IsAuth nvarchar(1),@OrderID nvarchar(10),@Xid nvarchar(31),@Re' 必須有參數 '@RespTime'，但未提供。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 56
+2017-07-05 15:52:48：System.Data.SqlClient.SqlException: 將資料類型從 nvarchar 轉換到 decimal 時發生錯誤。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 56
+2017-07-05 15:58:55：System.FormatException: 將參數值從 String 轉換成 Decimal 失敗。 ---> System.FormatException: 輸入字串格式不正確。
+   於 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   於 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   於 System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   於 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   於 System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   於 System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   於 System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters)
+   於 System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 57
+2017-07-05 16:00:33：System.FormatException: 將參數值從 String 轉換成 Decimal 失敗。 ---> System.FormatException: 輸入字串格式不正確。
+   於 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   於 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   於 System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   於 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   於 System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   於 System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   於 System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters)
+   於 System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 57
+2017-07-05 16:01:59：System.FormatException: 將參數值從 String 轉換成 Decimal 失敗。 ---> System.FormatException: 輸入字串格式不正確。
+   於 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   於 System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   於 System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   於 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType)
+   於 System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   於 System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   於 System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters)
+   於 System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.orderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 57
