@@ -26,14 +26,16 @@ namespace EC2_CHECK_UNIPAY
           try
             {
                   var li = dt.ToList<UnipayList>();
-                  var query = from b in li
-                              where refundSuccessli.Contains(b.OrderID)
-                              select new
-                                {
-                                    b.OrderID,
-                                    b.TotalReceiveAmount,
-                                    b.email
-                                };
+ 
+                  var query = li.Join(refundSuccessli,//要加入join的來源
+                      item1 => item1.OrderID,//li要join的值
+                      item2 => item2,//refundSuccessli要join的值
+                      (item1, item2) => new // (item1,item2) 將兩個物件比對
+                      {
+                            item1.OrderID,
+                            item1.TotalReceiveAmount,
+                            item1.email
+                      });
                   String strTemplatePath = System.IO.Directory.GetCurrentDirectory() + "\\Template\\refundMailTemplate.txt";
                   System.IO.StreamReader file = new System.IO.StreamReader(strTemplatePath, System.Text.Encoding.Default);
                   string strMailBody = file.ReadToEnd();

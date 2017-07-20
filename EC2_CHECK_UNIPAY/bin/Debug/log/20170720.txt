@@ -1,0 +1,6 @@
+
+2017-07-20 11:43:41：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 44
