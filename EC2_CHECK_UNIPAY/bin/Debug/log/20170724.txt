@@ -1,0 +1,201 @@
+
+2017-07-24 11:40:50：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 26
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 11:42:59：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 26
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 11:44:50：System.InvalidOperationException: 已經開啟一個與這個 Command 相關的 DataReader，必須先將它關閉。
+   於 System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   於 System.Data.SqlClient.SqlInternalTransaction.Rollback()
+   於 System.Data.SqlClient.SqlTransaction.Rollback()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 68
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 11:46:09：System.InvalidOperationException: 已經開啟一個與這個 Command 相關的 DataReader，必須先將它關閉。
+   於 System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   於 System.Data.SqlClient.SqlInternalTransaction.Rollback()
+   於 System.Data.SqlClient.SqlTransaction.Rollback()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 68
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 11:49:38：System.InvalidOperationException: 已經開啟一個與這個 Command 相關的 DataReader，必須先將它關閉。
+   於 System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   於 System.Data.SqlClient.SqlInternalTransaction.Rollback()
+   於 System.Data.SqlClient.SqlTransaction.Rollback()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 68
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 12:00:10：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:00:14：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 69
+2017-07-24 12:00:37：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:00:39：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 69
+2017-07-24 12:00:55：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:01:00：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 69
+2017-07-24 12:01:15：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:02:47：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 69
+2017-07-24 12:02:55：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:02:56：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 69
+2017-07-24 12:03:06：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:03:47：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:05:38：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:06:43：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:06:49：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 82
+2017-07-24 12:10:30：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:12:26：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:12:30：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:20:49：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:20:52：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:21:04：System.InvalidOperationException: 已經開啟一個與這個 Command 相關的 DataReader，必須先將它關閉。
+   於 System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   於 System.Data.SqlClient.SqlInternalTransaction.Rollback()
+   於 System.Data.SqlClient.SqlTransaction.Rollback()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 68
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
+2017-07-24 12:21:32：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:22:21：System.ArgumentOutOfRangeException: 索引超出範圍。必須為非負數且小於集合的大小。
+參數名稱: index
+   於 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   於 System.Collections.Generic.List`1.get_Item(Int32 index)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 50
+2017-07-24 12:29:17：訂單編號:0005001267 回應値:Success
+2017-07-24 12:29:19：訂單編號:0005001268 回應値:Success
+2017-07-24 12:30:04：訂單編號:0005001267 回應値:Success
+2017-07-24 12:30:04：訂單編號:0005001268 回應値:Success
+2017-07-24 12:38:44：System.InvalidOperationException: Fill: SelectCommand.Connection 屬性尚未初始化。
+   於 System.Data.Common.DbDataAdapter.GetConnection3(DbDataAdapter adapter, IDbCommand command, String method)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   於 EC2_CHECK_UNIPAY.GetOrderList.CallGetOrderListSP() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\GetOrderList.cs: 行 35
+2017-07-24 12:41:13：System.InvalidOperationException: Fill: SelectCommand.Connection 屬性尚未初始化。
+   於 System.Data.Common.DbDataAdapter.GetConnection3(DbDataAdapter adapter, IDbCommand command, String method)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   於 EC2_CHECK_UNIPAY.GetOrderList.CallGetOrderListSP() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\GetOrderList.cs: 行 35
+2017-07-24 12:43:20：System.InvalidOperationException: Fill: SelectCommand.Connection 屬性尚未初始化。
+   於 System.Data.Common.DbDataAdapter.GetConnection3(DbDataAdapter adapter, IDbCommand command, String method)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   於 EC2_CHECK_UNIPAY.GetOrderList.CallGetOrderListSP() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\GetOrderList.cs: 行 35
+2017-07-24 12:49:36：訂單編號:0005001267 回應値:Success
+2017-07-24 12:49:38：訂單編號:0005001268 回應値:Success
+2017-07-24 12:53:20：訂單編號:0005001267 回應値:Success
+2017-07-24 12:53:20：訂單編號:0005001268 回應値:Success
+2017-07-24 13:00:07：訂單編號:0005001267 回應値:Success
+2017-07-24 13:00:08：訂單編號:0005001268 回應値:Success
+2017-07-24 13:00:59：訂單編號:0005001267 回應値:Success
+2017-07-24 13:01:00：訂單編號:0005001268 回應値:Success
+2017-07-24 13:03:35：訂單編號:0005001267 回應値:Success
+2017-07-24 13:03:35：訂單編號:0005001268 回應値:Success
+2017-07-24 13:23:13：訂單編號:0005001267 回應値:Success
+2017-07-24 13:23:14：訂單編號:0005001268 回應値:Success
+2017-07-24 13:31:10：System.Data.SqlClient.SqlException: 從字元字串轉換到 datetime 時，轉換失敗。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 60
+2017-07-24 13:31:32：System.Data.SqlClient.SqlException: 從字元字串轉換到 datetime 時，轉換失敗。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 60

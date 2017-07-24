@@ -9,14 +9,16 @@ namespace EC2_CHECK_UNIPAY
     class UnionPaySetting
     {
         internal static readonly string strChinaTrustServer = ConfigurationManager.AppSettings["ChinaTrustServer"].ToString().Trim();
-        internal static readonly string strMerId = ConfigurationManager.AppSettings["merId"].ToString().Trim();
-        internal static readonly string strMacKey = ConfigurationManager.AppSettings["macKey"].ToString().Trim();
+
         internal static readonly string strReceiver = ConfigurationManager.AppSettings["receiver"].ToString().Trim();
         internal static readonly string strSender = ConfigurationManager.AppSettings["sender"].ToString().Trim();
         internal static readonly string strRefundTitle = ConfigurationManager.AppSettings["refundTitle"].ToString().Trim();
-
+        internal static readonly string strEn1 = ConfigurationManager.AppSettings["en1"].ToString().Trim();
+        internal static readonly string strEn2 = ConfigurationManager.AppSettings["en2"].ToString().Trim();
+        internal static readonly string strMacKey = CryptHelper.CryptHelper.DesDecrypt( ConfigurationManager.AppSettings["macKey"].ToString().Trim(), strEn1, strEn2);
+        internal static readonly string strMerId = CryptHelper.CryptHelper.DesDecrypt(ConfigurationManager.AppSettings["merId"].ToString().Trim(), strEn1, strEn2);
         internal SqlConnection conn;
-        internal SqlCommand sqlCmd = new SqlCommand();
+        //internal SqlCommand sqlCmd = new SqlCommand();
 
          
         #region 取得連線

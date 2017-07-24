@@ -10,7 +10,7 @@ namespace EC2_CHECK_UNIPAY
 {
     class GetOrderList : UnionPaySetting
     {
-     
+       
         private string bathType;
         public void setBathType(string bathType) { this.bathType = bathType; }
         private List<string> refundSuccessli = new List<string>();

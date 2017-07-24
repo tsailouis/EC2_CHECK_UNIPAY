@@ -22,11 +22,11 @@ namespace EC2_CHECK_UNIPAY
 
         
         public void UpdateOrderStatusToDB() {
-
-            SqlTransaction tran= conn.BeginTransaction();;
+             ConnDB();
+            SqlTransaction tran= conn.BeginTransaction();
             try
             {
-                ConnDB();
+               
                
                 DataTable dt = new DataTable();
                 string sql = "";

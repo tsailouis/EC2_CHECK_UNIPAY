@@ -36,7 +36,7 @@ namespace EC2_CHECK_UNIPAY
                      uc.lidm = dr["OrderId"].ToString(); //訂單編號
                      string rtnCode = uc.doAction(); // 執行交易 (查詢交易)
                      List<CTCBAPI.Model.UnionMod> li = uc.outPara;
-                     if (rtnCode.Equals("Success"))
+                     if (rtnCode.Equals("Success") && li.Count>0)
                      {
                        
 
@@ -66,22 +66,27 @@ namespace EC2_CHECK_UNIPAY
                                  upOrder.setDr(dr);
                                  upOrder.setBathType(bathType);
                                  upOrder.UpdateOrderStatusToDB();
-                                 if (li[0].orderStatus.Equals("43") && dr["RTN_SUCCESS"].ToString().Equals("1") && dr["RTN_MAIL_SEND"].ToString().Equals("0") && (dr["OrderId"].ToString().Equals("91") || dr["OrderId"].ToString().Equals("92")))
+                                 if (bathType.Equals("2"))
                                  {
-                                 
-                                     //43:退貨成功
-                                 
-                                    refundSuccessli.Add(li[0].lidm.ToString());
+                                     if (li[0].orderStatus.Equals("43") && dr["RTN_SUCCESS"].ToString().Equals("1") && dr["RTN_MAIL_SEND"].ToString().Equals("0") && (dr["OrderId"].ToString().Equals("91") || dr["OrderId"].ToString().Equals("92")))
+                                     {
+
+                                         //43:退貨成功
+
+                                         refundSuccessli.Add(li[0].lidm.ToString());
+                                     }
                                  }
                                  
-                         }                           
-                          
-                         if (li[0].orderStatus.Equals("44") || li[0].orderStatus.Equals("24"))
-                         {       
-                                //44:退貨失敗 24:請款失敗 把失敗訊息存到MAP
+                         }
+
+                         
+                             if (li[0].orderStatus.Equals("44") || li[0].orderStatus.Equals("24"))
+                             {
+                                 //44:退貨失敗 24:請款失敗 把失敗訊息存到MAP
                                  failResult.Add(li[0].lidm.ToString(), li);
 
-                         }
+                             }
+                       
                       
                      }
                      else

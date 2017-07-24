@@ -11,13 +11,13 @@ namespace EC2_CHECK_UNIPAY
         static void Main(string[] args)
         {
             #if DEBUG
-
+       
             GetOrderList gtest = new GetOrderList();
-            gtest.setBathType("2");
+            gtest.setBathType("1");
             gtest.CallGetOrderListSP();
-            #endif
-                      
-            
+#endif
+
+
             //1=授權/付款狀態 2=授權取消/退款狀態
             if (args.Length!=0)
             {

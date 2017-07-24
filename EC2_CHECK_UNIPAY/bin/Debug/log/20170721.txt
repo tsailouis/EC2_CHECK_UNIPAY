@@ -1,0 +1,4 @@
+
+2017-07-21 17:58:34：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 26
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 68
