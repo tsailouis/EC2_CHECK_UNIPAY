@@ -1,0 +1,47 @@
+
+2017-07-31 13:41:26：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 55
+2017-07-31 13:48:23：System.ArgumentException: 資料行 'IsAuth' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 EC2_CHECK_UNIPAY.UpdateOrderStatus.UpdateOrderStatusToDB() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UpdateOrderStatus.cs: 行 55
+2017-07-31 14:37:28：System.ArgumentException: 型別 'System.Int32' 的物件無法轉換成型別 'System.String'。
+   於 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   於 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.CreateItemFromRow[T](DataRow row, IList`1 properties) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 45
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.ToList[T](DataTable table) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 19
+   於 EC2_CHECK_UNIPAY.SendMail.sendRefundMail() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\SendMail.cs: 行 28
+2017-07-31 14:45:21：System.ArgumentException: 型別 'System.Int32' 的物件無法轉換成型別 'System.String'。
+   於 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   於 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.CreateItemFromRow[T](DataRow row, IList`1 properties) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 45
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.ToList[T](DataTable table) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 19
+   於 EC2_CHECK_UNIPAY.SendMail.sendRefundMail() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\SendMail.cs: 行 28
+2017-07-31 14:53:40：System.ArgumentException: 型別 'System.Int32' 的物件無法轉換成型別 'System.String'。
+   於 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   於 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   於 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.CreateItemFromRow[T](DataRow row, IList`1 properties) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 45
+   於 EC2_CHECK_UNIPAY.DataTableExtensions.ToList[T](DataTable table) 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\DataTableExtensions.cs: 行 19
+   於 EC2_CHECK_UNIPAY.SendMail.sendRefundMail() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\SendMail.cs: 行 28
+2017-07-31 16:49:20：System.FormatException: 輸入字串格式不正確。
+   於 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   於 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   於 System.Convert.ToInt32(String value)
+   於 EC2_CHECK_UNIPAY.UnionPayRefund.updateUnionPayRefund() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayRefund.cs: 行 34
+2017-07-31 16:58:08：發動退貨失敗訂單編號:0005001293 回應値:Success
+2017-07-31 16:58:08：發動退貨失敗訂單編號:0005001293 回應訊息 = 2020
+2017-07-31 16:58:09：發動退貨失敗訂單編號:0005001293 回應訊息 = 訂單狀態不為請款成功、退貨成功、退貨失敗

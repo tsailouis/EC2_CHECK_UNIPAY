@@ -13,7 +13,7 @@ namespace EC2_CHECK_UNIPAY
             #if DEBUG
        
             GetOrderList gtest = new GetOrderList();
-            gtest.setBathType("1");
+            gtest.setBathType("2");
             gtest.CallGetOrderListSP();
 #endif
 

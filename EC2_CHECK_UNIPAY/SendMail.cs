@@ -33,9 +33,10 @@ namespace EC2_CHECK_UNIPAY
                       (item1, item2) => new // (item1,item2) 將兩個物件比對
                       {
                             item1.OrderID,
-                            item1.TotalReceiveAmount,
+                            item1.RTN_AMOUNT,
                             item1.email
                       });
+
                   String strTemplatePath = System.IO.Directory.GetCurrentDirectory() + "\\Template\\refundMailTemplate.txt";
                   System.IO.StreamReader file = new System.IO.StreamReader(strTemplatePath, System.Text.Encoding.Default);
                   string strMailBody = file.ReadToEnd();
@@ -44,7 +45,7 @@ namespace EC2_CHECK_UNIPAY
                   foreach (var i in query) 
                   {
                       string strTempMailBody = strMailBody;
-                      strTempMailBody = strTempMailBody.Replace("@orderID", i.OrderID.ToString()).Replace("@date", DateTime.Now.ToString("yyyy/MM/dd")).Replace("@refundDate", DateTime.Now.AddDays(1).ToString("yyyy/MM/dd")).Replace("@TotalReceiveAmount", i.TotalReceiveAmount.ToString());
+                      strTempMailBody = strTempMailBody.Replace("@orderID", i.OrderID.ToString()).Replace("@date", DateTime.Now.ToString("yyyy/MM/dd")).Replace("@refundDate", DateTime.Now.AddDays(1).ToString("yyyy/MM/dd")).Replace("@RTN_AMOUNT", i.RTN_AMOUNT.ToString());
                       insertS_MailQ(strRefundTitle, strTempMailBody, i.email);
                   }
 

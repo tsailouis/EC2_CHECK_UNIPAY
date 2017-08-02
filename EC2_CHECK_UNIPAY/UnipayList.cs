@@ -12,8 +12,9 @@ namespace EC2_CHECK_UNIPAY
         public string RTN_MAIL_SEND { get; set; }
         public string email { get; set; }
         public string OrderID { get; set; }
-        public string TotalReceiveAmount { get; set; }
+        public string RTN_AMOUNT { get; set; }
         public string OrderStatus { get; set; }
+        public string IsAuth { get; set; }
    
     }
 }

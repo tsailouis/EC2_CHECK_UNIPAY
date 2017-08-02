@@ -1,0 +1,9 @@
+
+2017-07-28 17:39:21：查詢失敗訂單編號:0005001304 回應値:999
+2017-07-28 17:39:22：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 108
+2017-07-28 17:39:49：查詢失敗訂單編號:0005001304 回應値:999
+2017-07-28 17:40:17：System.NullReferenceException: 並未將物件參考設定為物件的執行個體
+   於 EC2_CHECK_UNIPAY.UnionPayQueryByLidm.unionPayQueryByLidm() 於 D:\LOUIS\ESLITE\request\25_銀聯卡\測試程式\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\EC2_CHECK_UNIPAY\UnionPayQueryByLidm.cs: 行 108
+2017-07-28 18:07:06：查詢失敗訂單編號:0005001304 回應値:999
+2017-07-28 18:07:08：查詢失敗 回傳List沒有値

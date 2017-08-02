@@ -32,7 +32,7 @@ namespace EC2_CHECK_UNIPAY
                 uc.xid = li[0].xid; // 設定交易識別碼
                 uc.lidm = li[0].lidm; // 設置訂單編號
                 string rtnCode = uc.doAction(); // 執行交易 (取消交易)
-                if (rtnCode.Equals("Success"))
+                if (rtnCode.Equals("Success") && uc.outPara.respCode.Equals("00"))
                 {
                     UpdateOrderStatus upOrder = new UpdateOrderStatus();
                     upOrder.setList(li);
@@ -41,8 +41,10 @@ namespace EC2_CHECK_UNIPAY
                     upOrder.UpdateOrderStatusToDB();
                 }
                 else
-                {   //發動退貨失敗
-                    InsertLog.insertLog("訂單編號:" + dr["OrderId"].ToString() + " 回應値:" + rtnCode);
+                {   
+                    InsertLog.insertLog("發動取消交易失敗 訂單編號:" + dr["OrderId"].ToString() + " 回應値:" + rtnCode);
+                    InsertLog.insertLog("發動取消交易失敗 訂單編號:" + dr["OrderId"].ToString() + " 回應訊息 = " + uc.outPara.respCode);
+                    InsertLog.insertLog("發動取消交易失敗 訂單編號:" + dr["OrderId"].ToString() + " 回應訊息 = " + uc.outPara.respMsg);
                 }
 
                   

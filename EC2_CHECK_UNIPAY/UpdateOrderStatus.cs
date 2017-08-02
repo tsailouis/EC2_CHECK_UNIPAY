@@ -31,33 +31,46 @@ namespace EC2_CHECK_UNIPAY
                 DataTable dt = new DataTable();
                 string sql = "";
                 SqlCommand sda;
-                if (bathType.Equals("1"))
+
+                if (bathType.Equals("1") && li.Count>0)
                 {
                  
 
                     sql = "EXEC EC2_UPDATE_UNIPAY_AUTH_AND_UNAUTH @IsAuth,@OrderID,@Xid,@RequestTime ,@RespTime,@OrderStatus,@TraceNumber,@TraceTime,@Qid,@AuthAmount";
-                   
+
+                }
+                else if (bathType.Equals("1") && li.Count == 0) 
+                {
+                    sql = "EXEC EC2_UPDATE_UNIPAY_AUTH_AND_UNAUTH @IsAuth,@OrderID,'','' ,'','14','','','','0'";
                 }
                 else if (bathType.Equals("2"))
                 {
-                    sql = "EXEC EC2_UPDATE_UNIPAY_REFUND_AND_CANCEL @OrderID,@Xid,@RequestTime ,@RespTime,@OrderStatus,@TraceNumber,@TraceTime,@Qid,@AuthAmount";
+                    sql = "EXEC EC2_UPDATE_UNIPAY_REFUND_AND_CANCEL @OrderID,@Xid,@RequestTime ,@RespTime,@OrderStatus,@TraceNumber,@TraceTime,@Qid,@AuthAmount,@RTN_AMOUNT";
                 }
                
                
                 sda = new SqlCommand(sql, conn);
                 sda.Transaction = tran;
-                if (bathType.Equals("1")) { sda.Parameters.AddWithValue("@IsAuth", dr["IsAuth"].ToString()); }
-                sda.Parameters.AddWithValue("@OrderID", String.IsNullOrEmpty(li[0].lidm) ? "" : li[0].lidm);
-                sda.Parameters.AddWithValue("@Xid", String.IsNullOrEmpty(li[0].xid) ? "" :li[0].xid);
-                sda.Parameters.AddWithValue("@RequestTime", String.IsNullOrEmpty(li[0].requestTime) ? "" :li[0].requestTime);
-                sda.Parameters.AddWithValue("@RespTime", String.IsNullOrEmpty(li[0].respTime) ? "" :li[0].respTime);
-                sda.Parameters.AddWithValue("@OrderStatus", String.IsNullOrEmpty(li[0].orderStatus) ? "" :li[0].orderStatus);
-                sda.Parameters.AddWithValue("@TraceNumber",String.IsNullOrEmpty( li[0].traceNumber) ? "" :li[0].traceNumber);
-                sda.Parameters.AddWithValue("@TraceTime", String.IsNullOrEmpty(li[0].traceTime) ? "" :li[0].traceTime);
-                sda.Parameters.AddWithValue("@Qid", String.IsNullOrEmpty(li[0].qid) ? "" :li[0].qid);
-                sda.Parameters.AddWithValue("@AuthAmount", String.IsNullOrEmpty(li[0].settleAmount) ? 0 : Int32.Parse(li[0].settleAmount));
 
-                sda.ExecuteReader();
+                if (bathType.Equals("1")) { sda.Parameters.AddWithValue("@IsAuth", dr["IsAuth"].ToString()); }
+
+                sda.Parameters.AddWithValue("@OrderID", dr["OrderID"].ToString());
+                if ((bathType.Equals("1") && li.Count > 0) || bathType.Equals("2")) 
+                {
+                 
+                    sda.Parameters.AddWithValue("@Xid", String.IsNullOrEmpty(li[0].xid) ? "" :li[0].xid);
+                    sda.Parameters.AddWithValue("@RequestTime", String.IsNullOrEmpty(li[0].requestTime) ? "" :li[0].requestTime);
+                    sda.Parameters.AddWithValue("@RespTime", String.IsNullOrEmpty(li[0].respTime) ? "" :li[0].respTime);
+                    sda.Parameters.AddWithValue("@OrderStatus", String.IsNullOrEmpty(li[0].orderStatus) ? "" :li[0].orderStatus);
+                    sda.Parameters.AddWithValue("@TraceNumber",String.IsNullOrEmpty( li[0].traceNumber) ? "" :li[0].traceNumber);
+                    sda.Parameters.AddWithValue("@TraceTime", String.IsNullOrEmpty(li[0].traceTime) ? "" :li[0].traceTime);
+                    sda.Parameters.AddWithValue("@Qid", String.IsNullOrEmpty(li[0].qid) ? "" :li[0].qid);
+                    sda.Parameters.AddWithValue("@AuthAmount", String.IsNullOrEmpty(li[0].settleAmount) ? 0 : Int32.Parse(li[0].settleAmount));
+                }
+                if (bathType.Equals("2")) { sda.Parameters.AddWithValue("@RTN_AMOUNT", dr["RTN_AMOUNT"].ToString()); }
+              
+
+                sda.ExecuteNonQuery();
 
                 tran.Commit();    
 
